@@ -1,0 +1,229 @@
+/*
+General style: fonts, spacing, etc.
+*/
+
+body {
+    font-family: "Times New Roman", Georgia, Serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+}
+
+/*
+Rainbow animation
+woooooOOOOooooo
+*/
+
+.rainbow-bg {
+    animation: rainbow-bg 2.5s linear;
+    animation-iteration-count: infinite;
+}
+
+.rainbow {
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rainbow-bg {
+    100%, 0% {
+        background-color: rgb(255, 0, 0);
+    }
+    8% {
+        background-color: rgb(255, 127, 0);
+    }
+    16% {
+        background-color: rgb(255, 255, 0);
+    }
+    25% {
+        background-color: rgb(127, 255, 0);
+    }
+    33% {
+        background-color: rgb(0, 255, 0);
+    }
+    41% {
+        background-color: rgb(0, 255, 127);
+    }
+    50% {
+        background-color: rgb(0, 255, 255);
+    }
+    58% {
+        background-color: rgb(0, 127, 255);
+    }
+    66% {
+        background-color: rgb(0, 0, 255);
+    }
+    75% {
+        background-color: rgb(127, 0, 255);
+    }
+    83% {
+        background-color: rgb(255, 0, 255);
+    }
+    91% {
+        background-color: rgb(255, 0, 127);
+    }
+}
+
+@keyframes rainbow {
+    100%, 0% {
+        color: rgb(255, 0, 0);
+    }
+    8% {
+        color: rgb(255, 127, 0);
+    }
+    16% {
+        color: rgb(255, 255, 0);
+    }
+    25% {
+        color: rgb(127, 255, 0);
+    }
+    33% {
+        color: rgb(0, 255, 0);
+    }
+    41% {
+        color: rgb(0, 255, 127);
+    }
+    50% {
+        color: rgb(0, 255, 255);
+    }
+    58% {
+        color: rgb(0, 127, 255);
+    }
+    66% {
+        color: rgb(0, 0, 255);
+    }
+    75% {
+        color: rgb(127, 0, 255);
+    }
+    83% {
+        color: rgb(255, 0, 255);
+    }
+    91% {
+        color: rgb(255, 0, 127);
+    }
+}
+
+/*
+Dark mode button
+*/
+
+:root {
+    --bs-dark: #212529;
+}
+
+.theme-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.theme-container:hover {
+    opacity: 0.8;
+}
+
+.shadow-dark {
+    background: linear-gradient(145deg, #23282c, #1e2125);
+    box-shadow: 17px 17px 23px #1a1d20,
+    -17px -17px 23px #282d32, inset 5px 5px 4px #1e2226,
+    inset -5px -5px 4px #24282c;
+}
+
+.shadow-light {
+    box-shadow: 7px 7px 15px -10px #bbcfda, -4px -4px 13px #ffffff,
+    inset 7px 7px 3px rgba(209, 217, 230, 0.35),
+    inset -11px -11px 3px rgba(255, 255, 255, 0.3)
+}
+
+@keyframes change {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.4);
+    }
+}
+
+.change {
+    animation-name: change;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+body.dark {
+    background-color: #292c35;
+    background-image: url("images/starry-sky.jpeg");
+}
+
+body.dark h1, body.dark .support a {
+    color: #fff;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: #111;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+
+/*  Support me if you like it */
+.support {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.support a {
+    color: #292c35;
+    font-size: 32px;
+    backface-visibility: hidden;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.support a:hover {
+    transform: scale(1.1);
+}
