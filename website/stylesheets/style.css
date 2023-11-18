@@ -6,6 +6,20 @@ body {
     font-family: "Times New Roman", Georgia, Serif;
 }
 
+body.dark, body.dark div.starry-night {
+    background-color: #000000;
+    background-image: url(/images/starry-sky.jpeg);
+    color: #ffff;
+}
+
+body.dark img {
+    display: none;
+}
+
+/*body.dark h1, body.dark p, body.dark a, body.dark span {*/
+/*    color: #fff;*/
+/*}*/
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display";
     letter-spacing: 5px;
@@ -131,15 +145,6 @@ Dark mode button
 
 .shadow-dark {
     background: linear-gradient(145deg, #23282c, #1e2125);
-    box-shadow: 17px 17px 23px #1a1d20,
-    -17px -17px 23px #282d32, inset 5px 5px 4px #1e2226,
-    inset -5px -5px 4px #24282c;
-}
-
-.shadow-light {
-    box-shadow: 7px 7px 15px -10px #bbcfda, -4px -4px 13px #ffffff,
-    inset 7px 7px 3px rgba(209, 217, 230, 0.35),
-    inset -11px -11px 3px rgba(255, 255, 255, 0.3)
 }
 
 @keyframes change {
@@ -156,15 +161,6 @@ Dark mode button
     animation-name: change;
     animation-duration: 1s;
     animation-direction: alternate;
-}
-
-body.dark {
-    background-color: #292c35;
-    background-image: url("images/starry-sky.jpeg");
-}
-
-body.dark h1, body.dark .support a {
-    color: #fff;
 }
 
 .checkbox {
@@ -185,14 +181,6 @@ body.dark h1, body.dark .support a {
     align-items: center;
 }
 
-.fa-moon {
-    color: #f1c40f;
-}
-
-.fa-sun {
-    color: #f39c12;
-}
-
 .checkbox-label .ball {
     background-color: #fff;
     width: 22px;
@@ -206,24 +194,4 @@ body.dark h1, body.dark .support a {
 
 .checkbox:checked + .checkbox-label .ball {
     transform: translateX(24px);
-}
-
-
-/*  Support me if you like it */
-.support {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-}
-
-.support a {
-    color: #292c35;
-    font-size: 32px;
-    backface-visibility: hidden;
-    display: inline-block;
-    transition: transform 0.2s ease;
-}
-
-.support a:hover {
-    transform: scale(1.1);
 }
