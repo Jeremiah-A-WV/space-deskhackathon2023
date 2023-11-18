@@ -6,14 +6,19 @@ body {
     font-family: "Times New Roman", Georgia, Serif;
 }
 
-body.dark, body.dark div.starry-night {
+body.dark {
     background-color: #000000;
-    background-image: url(/images/starry-sky.jpeg);
     color: #ffff;
 }
 
-body.dark img {
-    display: none;
+body.dark div.w3-white {
+    background-color: #181818!important;
+    color: #ffffff!important;
+}
+
+body.dark footer.w3-light-grey {
+    background-color: #181818!important;
+    color: #ffffff!important;
 }
 
 /*body.dark h1, body.dark p, body.dark a, body.dark span {*/
