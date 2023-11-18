@@ -6,19 +6,24 @@ body {
     font-family: "Times New Roman", Georgia, Serif;
 }
 
+/*
+CHANGES APPLIED AFTER DARK MODE
+*/
+
 body.dark {
     background-color: #000000;
     color: #ffff;
 }
-
 body.dark div.w3-white {
-    background-color: #181818!important;
-    color: #ffffff!important;
+    background-color: #181818 !important;
+    color: #ffffff !important;
 }
-
 body.dark footer.w3-light-grey {
-    background-color: #181818!important;
-    color: #ffffff!important;
+    background-color: #181818 !important;
+    color: #ffffff !important;
+}
+body.dark a.w3-bar {
+    background-color: #181818 !important;
 }
 
 /*body.dark h1, body.dark p, body.dark a, body.dark span {*/
@@ -31,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*
-Rainbow animation
+Rainbow background animation
 woooooOOOOooooo
 */
 
@@ -199,4 +204,8 @@ Dark mode button
 
 .checkbox:checked + .checkbox-label .ball {
     transform: translateX(24px);
+}
+
+.w3-button:first-child:enabled {
+    background-color: #cccc;
 }
